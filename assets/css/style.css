@@ -1,26 +1,44 @@
 #curtain-left {
     position: absolute;
+    overflow: hidden;
     top: 0;
     left: 0;
     width: 50%;
     height: 100%;
     background-color: black;
-    border-right: 2px solid white;
+    /* border-right: 2px solid blue; */
 }
 
 #curtain-right {
     position: absolute;
+    overflow: hidden;
     top: 0;
     right: 0;
     width: 50%;
     height: 100%;
     background-color: black;
-    border-left: 2px solid white;
+    /* border-left: 2px solid blue; */
 }
 
 #start-image {
     position: fixed;
-    width: 200px;
+    width: 20%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#first-name {
+    position: absolute;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#last-name {
+    position: absolute;
+    width: 50%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
