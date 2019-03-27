@@ -3,10 +3,18 @@ var head = 0;
 var intervalHeadAnimation = setInterval(animateHead, 1000);
 
 function animateHead() {
-    $("#start-image").attr("src", "assets/images/" + startImages[head]);
-    if (head == 4) {
-        clearInterval(intervalHeadAnimation);
-    } else {
-        head++;
-    }
+    $("#head-image").attr("src", "assets/images/" + startImages[head]);
+
+    switch (head) {
+        case 0:
+            $("#name-logo").show();
+            break;
+        case 1:
+            $("#wb-logo").show();
+            break;
+        case 4:
+            clearInterval(intervalHeadAnimation);
+    };
+
+    head++
 }
