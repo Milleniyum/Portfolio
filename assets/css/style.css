@@ -65,7 +65,7 @@ body {
     /* border-bottom: 2px solid white; */
     height: 0px;
     padding-left: 5px;
-    line-height: 60px;
+    line-height: 70px;
     overflow: hidden;
     /* border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px; */
@@ -82,17 +82,7 @@ body {
     color: white;
     font-weight: bold;
     top: 0;
-    left: 65px;
-}
-
-#first-logo {
-    height: 80%;
-    padding-right: 10px;
-}
-
-#last-logo {
-    height: 80%;
-    padding-left: 10px;
+    left: 75px;
 }
 
 #wb-logo {
@@ -125,7 +115,7 @@ body {
 
 @keyframes lower {
     to {
-        height: 60px;
+        height: 70px;
     }
 }
 
