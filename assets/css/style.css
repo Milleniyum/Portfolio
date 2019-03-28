@@ -1,22 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-image: url("../images/space.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
 }
 
-#background-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-}
 
-#background-image {
+/* #background-image {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
+} */
+
+#brand-logo {
+    height: 100%;
+}
+
+#content {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgb(45, 45, 219, 0.3);
+    border-left: 2px solid white;
+    border-right: 2px solid white;
 }
 
 #curtain-left {
@@ -67,7 +81,7 @@ body {
     display: none;
 }
 
-@keyframes shrinkImage {
+@keyframes shrink {
     to {
         width: 0;
         border: 0;
@@ -75,9 +89,29 @@ body {
 }
 
 .shrink {
-    animation-name: shrinkImage;
+    animation-name: shrink;
     animation-duration: 2s;
     animation-delay: 6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes growUp {
+    to {
+        height: 100%;
+    }
+}
+
+@keyframes growOut {
+    to {
+        width: 90%;
+    }
+}
+
+.grow {
+    animation-name: growUp, growOut;
+    animation-duration: 2s;
+    animation-delay: 8s, 10s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
