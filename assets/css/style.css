@@ -3,32 +3,19 @@
 }
 
 body {
-    background-image: url("../images/space.jpg");
+    background-image: url("../images/space_4.jpg");
     background-repeat: no-repeat;
     background-size: auto;
-}
-
-
-/* #background-image {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-} */
-
-#brand-logo {
-    height: 100%;
 }
 
 #content {
     position: absolute;
     width: 0;
-    height: 0;
-    top: 0;
+    height: 2px;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%);
-    background-color: rgba(45, 45, 219, 0.3);
+    transform: translate(-50%, -50%);
+    background-color: rgba(45, 45, 219, 0.4);
     border-left: 2px solid white;
     border-right: 2px solid white;
 }
@@ -72,6 +59,42 @@ body {
     display: none;
 }
 
+#navbar {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* border-bottom: 2px solid white; */
+    height: 0px;
+    padding-left: 5px;
+    line-height: 60px;
+    overflow: hidden;
+    /* border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px; */
+}
+
+#head-logo {
+    height: 100%;
+}
+
+.header-name {
+    position: absolute;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+    top: 0;
+    left: 65px;
+}
+
+#first-logo {
+    height: 80%;
+    padding-right: 10px;
+}
+
+#last-logo {
+    height: 80%;
+    padding-left: 10px;
+}
+
 #wb-logo {
     position: absolute;
     width: 55%;
@@ -88,14 +111,6 @@ body {
     }
 }
 
-.shrink {
-    animation-name: shrink;
-    animation-duration: 2s;
-    animation-delay: 6s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-}
-
 @keyframes growUp {
     to {
         height: 100%;
@@ -104,14 +119,36 @@ body {
 
 @keyframes growOut {
     to {
-        width: 75%;
+        width: 80%;
     }
 }
 
-.grow {
-    animation-name: growUp, growOut;
+@keyframes lower {
+    to {
+        height: 60px;
+    }
+}
+
+.shrink {
+    animation-name: shrink;
     animation-duration: 2s;
-    animation-delay: 8s, 10s;
+    animation-delay: 6s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.grow {
+    animation-name: growOut, growUp;
+    animation-duration: 2s;
+    animation-delay: 7s, 9s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.lower {
+    animation-name: lower;
+    animation-duration: 1s;
+    animation-delay: 11s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
