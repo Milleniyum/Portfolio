@@ -2,11 +2,11 @@
     box-sizing: border-box;
 }
 
-body {
-    background-image: url("../images/space_4.jpg");
+/* body {
+    background-image: url("../images/space_6.jpg");
     background-repeat: no-repeat;
     background-size: auto;
-}
+} */
 
 #backdrop {
     position: absolute;
@@ -15,7 +15,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(45, 45, 219, 0.4);
+    background-color: rgba(45, 45, 219, 0.3);
     border-left: 2px solid white;
     border-right: 2px solid white;
     z-index: -1
@@ -179,4 +179,48 @@ body {
     animation-delay: 11s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+}
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+/* @-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+} */
+
+.stars, .twinkling {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#000 url("../images/stars.png") repeat top center;
+  z-index:-2;
+}
+
+.twinkling{
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  z-index:-1;
+
+  /* -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite; */
+  animation:move-twink-back 200s linear infinite;
 }
