@@ -18,3 +18,10 @@ function animateHead() {
 
     head++
 }
+
+var intervalDisplayContent = setInterval(displayContent, 12000)
+
+function displayContent() {
+    $("#content").show();
+    clearInterval(intervalDisplayContent);
+};

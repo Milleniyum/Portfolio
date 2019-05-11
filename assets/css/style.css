@@ -2,11 +2,9 @@
     box-sizing: border-box;
 }
 
-/* body {
-    background-image: url("../images/space_6.jpg");
-    background-repeat: no-repeat;
-    background-size: auto;
-} */
+body {
+    font-family: 'Shadows Into Light', cursive;
+}
 
 #backdrop {
     position: absolute;
@@ -28,10 +26,18 @@
 }
 
 #content {
-    width: 80%;
     margin: 0 auto;
     margin-top: 75px;
     padding: 5px;
+    display: none;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.construction {
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
 }
 
 #curtain-left {
@@ -76,7 +82,6 @@
 #navbar {
     position: relative;
     display: inline-block;
-    font-family: 'Shadows Into Light', cursive;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     /* border-bottom: 2px solid white; */
